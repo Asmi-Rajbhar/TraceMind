@@ -18,9 +18,11 @@
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@types/mocha": "^10.0.10",
     "@types/prompt-sync": "^4.2.3",
     "dotenv": "^16.4.5",
     "hardhat": "^2.22.10",
+    "mocha": "^11.8.0",
     "prompt-sync": "^4.2.0",
     "solhint": "^5.0.3",
     "typescript": "^5.5.4"

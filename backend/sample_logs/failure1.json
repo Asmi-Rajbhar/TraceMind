@@ -1,0 +1,86 @@
+[
+  {
+    "timestamp": "2026-10-31T10:00:00Z",
+    "service": "api-gateway",
+    "level": "INFO",
+    "trace_id": "trace-201",
+    "message": "Incoming POST /checkout request received"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:01Z",
+    "service": "checkout-service",
+    "level": "INFO",
+    "trace_id": "trace-201",
+    "message": "Checkout process started for order ORD-501"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:02Z",
+    "service": "checkout-service",
+    "level": "INFO",
+    "trace_id": "trace-201",
+    "message": "Requesting inventory availability for product PROD-101"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:03Z",
+    "service": "inventory-service",
+    "level": "ERROR",
+    "trace_id": "trace-201",
+    "message": "Database connection pool exhausted. Unable to acquire connection"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:04Z",
+    "service": "inventory-service",
+    "level": "ERROR",
+    "trace_id": "trace-201",
+    "message": "Inventory database query failed after connection timeout"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:05Z",
+    "service": "checkout-service",
+    "level": "ERROR",
+    "trace_id": "trace-201",
+    "message": "Inventory validation failed due to downstream service timeout"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:06Z",
+    "service": "payment-service",
+    "level": "WARNING",
+    "trace_id": "trace-201",
+    "message": "Payment processing delayed because checkout validation is incomplete"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:08Z",
+    "service": "api-gateway",
+    "level": "ERROR",
+    "trace_id": "trace-201",
+    "message": "POST /checkout returned HTTP 504 Gateway Timeout"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:10Z",
+    "service": "inventory-service",
+    "level": "ERROR",
+    "trace_id": "trace-202",
+    "message": "Database connection pool exhausted. New connection request rejected"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:12Z",
+    "service": "checkout-service",
+    "level": "ERROR",
+    "trace_id": "trace-203",
+    "message": "Multiple checkout requests failing because inventory service is unavailable"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:15Z",
+    "service": "monitoring-service",
+    "level": "WARNING",
+    "trace_id": "trace-204",
+    "message": "Checkout error rate exceeded 40 percent threshold"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:20Z",
+    "service": "inventory-service",
+    "level": "INFO",
+    "trace_id": "trace-205",
+    "message": "Database connection pool recovery initiated"
+  }
+]

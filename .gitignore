@@ -1,27 +1,46 @@
-node_modules/
-.env
-.env.local
-.env*.local
 
-# hardhat
+# Dependencies
+node_modules/
+
+# Environment files and secrets
+.env
+.env.*
+!.env.example
+!.env.local.example
+.env.local
+backend/.env
+
+# Python
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+
+# Hardhat
 artifacts/
 cache/
 typechain-types/
 coverage/
 coverage.json
 
-# next.js
+# Next.js
 .next/
 out/
 build/
 
-# turbo
+# Turbo
 .turbo/
 
-# misc
+# Miscellaneous
 .DS_Store
 *.log
 npm-debug.log*
 pnpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# IDE
+.vscode/
+.idea/

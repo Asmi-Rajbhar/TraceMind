@@ -1,0 +1,87 @@
+
+[
+  {
+    "timestamp": "2026-10-31T10:00:00Z",
+    "service": "warehouse-service",
+    "level": "INFO",
+    "trace_id": "trace-inv-101",
+    "message": "Warehouse inventory synchronization started"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:02Z",
+    "service": "inventory-service",
+    "level": "INFO",
+    "trace_id": "trace-inv-102",
+    "message": "Received stock availability request for product SKU-501"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:04Z",
+    "service": "inventory-service",
+    "level": "WARN",
+    "trace_id": "trace-inv-103",
+    "message": "Database connection pool usage reached 90%"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:06Z",
+    "service": "inventory-service",
+    "level": "ERROR",
+    "trace_id": "trace-inv-104",
+    "message": "Database connection pool exhausted. Unable to acquire connection"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:07Z",
+    "service": "inventory-service",
+    "level": "ERROR",
+    "trace_id": "trace-inv-105",
+    "message": "Stock availability query failed due to database connection timeout"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:09Z",
+    "service": "warehouse-service",
+    "level": "ERROR",
+    "trace_id": "trace-inv-106",
+    "message": "Inventory synchronization failed. Inventory service unavailable"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:11Z",
+    "service": "order-service",
+    "level": "WARN",
+    "trace_id": "trace-inv-107",
+    "message": "Order processing delayed while waiting for stock confirmation"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:14Z",
+    "service": "inventory-service",
+    "level": "ERROR",
+    "trace_id": "trace-inv-108",
+    "message": "Repeated database connection acquisition failures"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:17Z",
+    "service": "order-service",
+    "level": "ERROR",
+    "trace_id": "trace-inv-109",
+    "message": "Order creation failed because inventory validation timed out"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:19Z",
+    "service": "notification-service",
+    "level": "WARN",
+    "trace_id": "trace-inv-110",
+    "message": "Order notification delayed because order processing is incomplete"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:22Z",
+    "service": "warehouse-service",
+    "level": "ERROR",
+    "trace_id": "trace-inv-111",
+    "message": "Inventory synchronization retry limit exceeded"
+  },
+  {
+    "timestamp": "2026-10-31T10:00:25Z",
+    "service": "inventory-service",
+    "level": "INFO",
+    "trace_id": "trace-inv-112",
+    "message": "Health check completed with degraded status"
+  }
+]

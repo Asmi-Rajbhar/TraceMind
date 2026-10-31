@@ -1,0 +1,39 @@
+
+[
+  {
+    
+    "timestamp": "2026-10-27T10:00:00Z",
+    "service": "api-gateway",
+    "level": "INFO",
+    "trace_id": "trace-101",
+    "message": "Incoming POST /checkout"
+  },
+  {
+    "timestamp": "2026-10-27T10:00:01Z",
+    "service": "order-service",
+    "level": "INFO",
+    "trace_id": "trace-101",
+    "message": "Order creation started"
+  },
+  {
+    "timestamp": "2026-10-27T10:00:02Z",
+    "service": "payment-service",
+    "level": "ERROR",
+    "trace_id": "trace-101",
+    "message": "Database connection timeout"
+  },
+  {
+    "timestamp": "2026-10-27T10:00:03Z",
+    "service": "order-service",
+    "level": "ERROR",
+    "trace_id": "trace-101",
+    "message": "Payment processing failed"
+  },
+  {
+    "timestamp": "2026-10-27T10:00:04Z",
+    "service": "api-gateway",
+    "level": "ERROR",
+    "trace_id": "trace-101",
+    "message": "Request failed with HTTP 500"
+  }
+]
