@@ -40,3 +40,4 @@ websockets==17.3
 yarl==1.25.1
 fastapi
 uvicorn[standard]
+google-genai
